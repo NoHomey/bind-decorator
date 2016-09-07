@@ -1,6 +1,6 @@
 {
   "name": "bind-decorator",
-  "version": "0.0.1-pre",
+  "version": "1.0.0",
   "description": "The fastest automatic method.bind(this) decorator",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
