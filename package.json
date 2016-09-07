@@ -1,0 +1,32 @@
+{
+  "name": "bind-decorator",
+  "version": "0.0.1-pre",
+  "description": "The fastest automatic method.bind(this) decorator",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "tsc -d -m commonjs  --moduleResolution node -t es5 --outDir ./dist ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoHomey/bind-decorator.git"
+  },
+  "keywords": [
+    "bind",
+    "autobind",
+    "methodbind",
+    "bind-decorator",
+    "autobind-decorator",
+    "decorator"
+  ],
+  "author": "Ivo Stratev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoHomey/bind-decorator/issues"
+  },
+  "homepage": "https://github.com/NoHomey/bind-decorator#readme",
+  "devDependencies": {
+    "typescript": "^1.8.10"
+  }
+}
