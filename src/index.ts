@@ -1,7 +1,6 @@
 export function bind<T extends Function>(target: Object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<T>): TypedPropertyDescriptor<T> | void {
-    if(descriptor === undefined) throw new Typeerror(`Only functions can be decorated with @bind. <${propertyKey}> is not a function!`);
-    if(typeof descriptor.value !== 'function') throw new Typeerror(`Only functions can be decorated with @bind. <${propertyKey}> is not a function, called on ${typeof descriptor.value}!`);
-
+    if(!descriptor || (typeof descriptor.value !== 'function')) throw new TypeError(`Only functions can be decorated with @bind. <${propertyKey}> is not a function!`);
+    
     return {
         configurable: true,
         get(): T {
