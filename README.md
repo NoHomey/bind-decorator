@@ -1,25 +1,10 @@
 # bind-decorator
-The best automatic context method binding decorator
 
-- It will `throw` exceptions if decorating anything other than `function`, [run this](throws.md);
-- Since the implementation follows the latest `decorator`s [purposal](http://tc39.github.io/proposal-decorators/) where compartion betweeen `this` and `target` can not be trusted, [run this if you don't belive me](not-comparable.md). `@bind` will always `return` a `configurable`, `enumerable` `get accessor propertyDescriptor` with value of `descriptor.value.bind(this)`.
+Context method binding decorator
 
-In fact the whole implementation is just 12 lines of code:
+- It will `throw` exceptions if decorating anything other than `function`
+- Since the implementation follows the latest `decorator`s [purposal](http://tc39.github.io/proposal-decorators/) where compartion betweeen `this` and `target` can not be trusted, `@bind` will always `return` a `configurable`, `get accessor propertyDescriptor` which will memomize the result of `descriptor.value.bind(this)` by re-defining the property descriptor of the method beeing decorated (Credits goes to [autobind-decorator](https://github.com/andreypopp/autobind-decorator/blob/master/src/index.js) for memoizing the result)
 
-```typescript
-export function bind<T extends Function>(target: Object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<T>): TypedPropertyDescriptor<T> | void {
-	if(!descriptor || (typeof descriptor.value !== 'function')) throw new TypeError(`Only functions can be decorated with @bind. <${propertyKey}> is not a function!`);
-	
-	return {
-		configurable: true,
-		get(): T {
-			return descriptor.value.bind(this);
-		}
-	};
-}
-
-export default bind;
-```
 
 # Install
 
