@@ -2,11 +2,13 @@
   "name": "bind-decorator",
   "version": "1.0.3",
   "description": "The fastest automatic method.bind(this) decorator",
-  "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "tsc -d -m commonjs  --moduleResolution node -t es5 --outDir ./dist ./src/index.ts"
+    "test": "tsc && jest --verbose",
+    "typings": "typings install",
+    "npm": "tsc -d -p . && mv ./src/index.js . && mv ./src/index.d.ts .",
+    "clean": "rm -f ./src/index.js* ./__tests__/*.d.ts ./__tests__/*.js*"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,8 @@
   },
   "homepage": "https://github.com/NoHomey/bind-decorator#readme",
   "devDependencies": {
-    "typescript": "^1.8.10"
+    "jest": "^15.1.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.3"
   }
 }
