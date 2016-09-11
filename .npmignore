@@ -1,5 +1,8 @@
 src
-node_modules
-.git
-.gitignore
+__tests__
+typings
 .vscode
+tsconfig.json
+typings.json
+.gitignore
+.npmignore
