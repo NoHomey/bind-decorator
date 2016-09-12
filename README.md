@@ -82,3 +82,22 @@ test(); // warns 'bind'.
 Test.test(); // logs 'static'.
 ```
 
+# Testing
+
+1. `npm install`
+
+2. `npm test`
+
+# Contributing
+
+1. `npm install`
+
+2. `npm run typings`
+
+3. Make changes
+
+4. If necessary add some tests to `__tests__`
+
+5. `npm test`
+
+6. Make a Pull Request
