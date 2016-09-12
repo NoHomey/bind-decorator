@@ -38,6 +38,7 @@ jspm_packages
 
 *.map
 *.js
-*.d.ts
+*/*.d.ts
+index.d.ts
 typings
 .vscode

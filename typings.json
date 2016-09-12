@@ -1,6 +1,5 @@
 {
   "globalDependencies": {
-    "node": "registry:dt/node",
     "jest": "registry:dt/jest"
   }
 }
