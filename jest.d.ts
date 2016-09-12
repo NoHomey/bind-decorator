@@ -72,7 +72,6 @@ declare namespace jest {
     function useFakeTimers(): void;
     function useRealTimers(): void;
 
-    // taken from Jasmine which takes from TypeScript lib.core.es6.d.ts, applicable to CustomMatchers.contains()
     interface ArrayLike<T> {
         length: number;
         [n: number]: T;
