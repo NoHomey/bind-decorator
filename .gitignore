@@ -40,5 +40,7 @@ jspm_packages
 *.js
 */*.d.ts
 index.d.ts
+lcov.info
+coverage
 typings
 .vscode
