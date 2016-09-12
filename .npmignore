@@ -1,7 +1,9 @@
 src
 __tests__
 typings
+coverage
 .vscode
+lcov.info
 tsconfig.json
 typings.json
 .gitignore
