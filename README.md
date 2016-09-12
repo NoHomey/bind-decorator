@@ -2,9 +2,9 @@
 
 Context method binding decorator.
 
-[![npm version](https://badge.fury.io/js/react-component-ref.svg)](https://badge.fury.io/js/react-component-ref)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/NoHomey/react-component-ref)
-[![Build Status](https://semaphoreci.com/api/v1/nohomey/react-component-ref/branches/master/badge.svg)](https://semaphoreci.com/nohomey/react-component-ref)
+[![npm version](https://badge.fury.io/js/bind-decorator.svg)](https://badge.fury.io/js/bind-decorator)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/NoHomey/bind-decorator)
+[![Build Status](https://semaphoreci.com/api/v1/nohomey/bind-decorator/branches/master/badge.svg)](https://semaphoreci.com/nohomey/bind-decorator)
 
 `@bind` is just a little faster version of [`@autobind`](https://github.com/andreypopp/autobind-decorator/blob/master/src/index.js) for decorating methods only, by binding them to the current context. It is written in TypeScript and follows the latest `decorator`s [purposal](http://tc39.github.io/proposal-decorators/).
 
