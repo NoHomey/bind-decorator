@@ -1,0 +1,13 @@
+--- 
+engines: 
+  fixme: 
+    enabled: true
+exclude_paths: 
+  - LICENSE
+  - README.md
+  - *.json
+  - jest.d.ts
+  - __*/*
+ratings: 
+  paths: 
+    - src/*
