@@ -4,7 +4,7 @@ Context method binding decorator.
 
 [![npm version](https://badge.fury.io/js/bind-decorator.svg)](https://badge.fury.io/js/bind-decorator)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/NoHomey/bind-decorator)
-[![Build Status](https://semaphoreci.com/api/v1/nohomey/bind-decorator/branches/master/badge.svg)](https://semaphoreci.com/nohomey/bind-decorator)
+[![Build Status](http://semaphoreci.com/api/v1/nohomey/bind-decorator/branches/master/badge.svg)](https://semaphoreci.com/nohomey/bind-decorator)
 [![Code Climate](https://codeclimate.com/github/NoHomey/bind-decorator/badges/gpa.svg)](https://codeclimate.com/github/NoHomey/bind-decorator)
 [![Test Coverage](https://codeclimate.com/github/NoHomey/bind-decorator/badges/coverage.svg)](https://codeclimate.com/github/NoHomey/bind-decorator/coverage)
 [![Issue Count](https://codeclimate.com/github/NoHomey/bind-decorator/badges/issue_count.svg)](https://codeclimate.com/github/NoHomey/bind-decorator)
