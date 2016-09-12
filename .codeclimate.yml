@@ -5,7 +5,7 @@ engines:
 exclude_paths: 
   - LICENSE
   - README.md
-  - *.json
+  - "*.json"
   - jest.d.ts
   - __*/*
 ratings: 
