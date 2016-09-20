@@ -6,7 +6,7 @@
         "experimentalDecorators": true
     },
     "files": [
-        "jest.d.ts",
+        "typings/index.d.ts",
         "src/index.ts",
         "__tests__/index.spec.ts"
     ],
