@@ -8,6 +8,8 @@ Context method binding decorator.
 [![Code Climate](https://codeclimate.com/github/NoHomey/bind-decorator/badges/gpa.svg)](https://codeclimate.com/github/NoHomey/bind-decorator)
 [![Test Coverage](https://codeclimate.com/github/NoHomey/bind-decorator/badges/coverage.svg)](https://codeclimate.com/github/NoHomey/bind-decorator/coverage)
 [![Issue Count](https://codeclimate.com/github/NoHomey/bind-decorator/badges/issue_count.svg)](https://codeclimate.com/github/NoHomey/bind-decorator)
+![TypeScript](https://img.shields.io/badge/%3C%20%2F%3E-TypeScript-blue.svg)
+![Typings](https://img.shields.io/badge/typings-%E2%9C%93-brightgreen.svg)
 
 `@bind` is just a little faster version of [`@autobind`](https://github.com/andreypopp/autobind-decorator/blob/master/src/index.js) for decorating methods only, by binding them to the current context. It is written in TypeScript and follows the latest `decorator`s [purposal](http://tc39.github.io/proposal-decorators/).
 
