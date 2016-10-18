@@ -108,22 +108,23 @@ describe('@bind', function () {
         describe('when multiple references to bound method are obtained', function () {
             it('always returns the same bound method reference', function () {
                 class Decorated {
-                    public constructor() {
+                    public constructor(private n: number) {
 
                     }
 
                     @bind
-                    public method(): void {
-
+                    public method(): number {
+                        return this.n;
                     }
                 }
 
-                const tested: Decorated = new Decorated();
+                const tested: Decorated = new Decorated(9);
                 const ref1: Function = tested.method;
                 const ref2: Function = tested.method;
                 expect(ref1).toBe(tested.method);
                 expect(ref2).toBe(tested.method);
                 expect(ref2).toBe(ref1);
+                expect(ref1()).toBe(9);
             });
         });
     });

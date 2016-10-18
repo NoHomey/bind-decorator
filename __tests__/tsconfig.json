@@ -6,11 +6,12 @@
         "strictNullChecks": true,
         "noImplicitThis": true,
         "noUnusedParameters": false,
-        "noUnusedLocals": true,
+        "noUnusedLocals": false,
         "experimentalDecorators": true
     },
     "files": [
-        "src/index.ts"
+        "../src/index.ts",
+        "index.spec.ts"
     ],
     "exclude": [
         "node_modules"
