@@ -20,6 +20,12 @@ If you are looking for not just method decorator but rather full class bounding 
 
 # Install
 
+Install with npm:
+
+```bash
+$ npm install bind-decorator
+```
+
 [![NPM](https://nodei.co/npm/bind-decorator.png?downloads=true&stars=true)](https://nodei.co/npm/bind-decorator/)
 
 # Usage
@@ -94,12 +100,10 @@ Test.test(); // logs 'static'.
 
 1. `npm install`
 
-2. `npm run typings`
+2. Make changes
 
-3. Make changes
+3. If necessary add some tests to `__tests__`
 
-4. If necessary add some tests to `__tests__`
+4. `npm test`
 
-5. `npm test`
-
-6. Make a Pull Request
+5. Make a Pull Request
