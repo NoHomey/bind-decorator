@@ -11,7 +11,7 @@ export function bind<T extends Function>(target: Object, propertyKey: string, de
     return {
         configurable: constants.boolTrue,
         get(this: T): T {
-            const bound: T = descriptor!.value!.bind(this);
+            const bound: T = descriptor.value!.bind(this);
             // Credits to https://github.com/andreypopp/autobind-decorator for memoizing the result of bind against a symbol on the instance.
             Object.defineProperty(this, propertyKey, {
                 value: bound,
