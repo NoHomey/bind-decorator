@@ -11,7 +11,7 @@ describe('@bind', function () {
             }
 
             expect(decorateClass).toThrowError(TypeError);
-            expect(decorateClass).toThrowError(`Only functions can be decorated with @bind. <undefined> is not a function!`);
+            expect(decorateClass).toThrow(`Only methods can be decorated with @bind. <undefined> is not a method!`);
         });
     });
 
@@ -25,7 +25,7 @@ describe('@bind', function () {
             }
 
             expect(decorateProperty).toThrowError(TypeError);
-            expect(decorateProperty).toThrowError(`Only functions can be decorated with @bind. <someProperty> is not a function!`);
+            expect(decorateProperty).toThrowError(`Only methods can be decorated with @bind. <someProperty> is not a method!`);
         });
     });
 
@@ -40,7 +40,7 @@ describe('@bind', function () {
             }
 
             expect(decorateParameter).toThrowError(TypeError);
-            expect(decorateParameter).toThrowError(`Only functions can be decorated with @bind. <undefined> is not a function!`);
+            expect(decorateParameter).toThrowError(`Only methods can be decorated with @bind. <undefined> is not a method!`);
         });
     });
 

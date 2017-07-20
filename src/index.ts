@@ -3,9 +3,9 @@ namespace constants {
     export const boolTrue: boolean = true;
 }
 
-export function bind<T extends Function>(target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<T>): TypedPropertyDescriptor<T> | void {
+export function bind<T extends Function>(target: object, propertyKey: string, descriptor: TypedPropertyDescriptor<T>): TypedPropertyDescriptor<T> | void {
     if(!descriptor || (typeof descriptor.value !== constants.typeOfFunction)) {
-        throw new TypeError(`Only functions can be decorated with @bind. <${propertyKey}> is not a function!`);
+        throw new TypeError(`Only methods can be decorated with @bind. <${propertyKey}> is not a method!`);
     }
     
     return {

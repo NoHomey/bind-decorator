@@ -7,12 +7,14 @@
         "noImplicitThis": true,
         "noUnusedParameters": false,
         "noUnusedLocals": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "types": []
     },
     "files": [
         "src/index.ts"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "__tests__"
     ]
 }
