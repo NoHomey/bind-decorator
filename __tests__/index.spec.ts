@@ -59,27 +59,45 @@ describe('@bind', function () {
         });
 
         describe('when used to bind to this context', function () {
-            it('binds decorated method to this context', function () {
-                class thisContext {
-                    private test: string;
+            class thisContext {
+                protected test: string;
 
-                    public constructor() { }
+                public constructor() { }
 
-                    public getTest(): string {
-                        return this.test;
-                    }
-
-                    @bind
-                    public setTest(test: string): void {
-                        this.test = test;
-                    }
+                public getTest(): string {
+                    return this.test;
                 }
 
+                @bind
+                public setTest(test: string): void {
+                    this.test = test;
+                }
+            }
+
+            it('binds decorated method to this context', function () {                
                 const tested: thisContext = new thisContext();
                 const { setTest } = tested;
                 setTest('unit');
 
                 expect(tested.getTest()).toBe('unit');
+            });
+
+            
+            it('can be overwritten as well', function () {
+                class thisInheritedContext extends thisContext {
+                    @bind
+                    public setTest(inherited: string): void {
+                        this.test = 'inherited ' + inherited;
+                    }
+                }
+
+                const tested: thisContext = new thisContext();
+                tested.setTest('unit');
+                expect(tested.getTest()).toBe('unit');
+
+                const inheritedTested: thisInheritedContext = new thisInheritedContext();
+                inheritedTested.setTest('unit');
+                expect(inheritedTested.getTest()).toBe('inherited unit');
             });
         });
 
